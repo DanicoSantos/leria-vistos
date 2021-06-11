@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section class="hero is-medium is-info">
+      <div class="hero-body">
+        <p class="title">
+          Hero title
+        </p>
+        <p class="subtitle">
+          Hero subtitle
+        </p>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  components: {},
+  mounted() {
+    this.changePageTitle();
+  },
+  methods: {
+    changePageTitle() {
+      document.title = "Home | Leria Vistos";
+    },
+  },
+};
 </script>
+
+<style lang="scss"></style>
